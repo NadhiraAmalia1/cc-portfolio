@@ -1,0 +1,120 @@
+/* FIX RESPONSIVE IPAD, SURFACE */
+@media screen and (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+  .ipad-fix {
+    padding-top: 18rem !important;
+    transform: scale(1.15);
+    transform-origin: top center;
+  }
+
+  .ipad-pro-fix h1 {
+    font-size: 3.75rem !important;
+  }
+
+  .ipad-pro-fix p {
+    font-size: 1.25rem !important;
+  }
+
+  .ipad-pro-fix a {
+    font-size: 1.15rem !important;
+    padding: 0.75rem 2rem !important;
+  }
+
+  .hero-avatar {
+    width: 18rem !important;
+    height: 19rem !important;
+  }
+}
+
+
+/* ============ FIX iPad Air, iPad Mini, Zenbook Fold ============ */
+@media screen and (max-width: 910px) and (min-height: 1000px) {
+  .fold-fix {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2.5rem !important;
+    padding-top: 3rem !important;
+  }
+
+  .fold-fix .hero-avatar {
+    width: 18rem !important;
+    height: 19rem !important;
+    margin-top: 0 !important;
+    /* margin-bottom: 0rem !important; */
+  }
+
+  .fold-fix h1 {
+    font-size: 3.2rem !important;
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fold-fix p {
+    font-size: 1.25rem !important;
+    text-align: center !important;
+  }
+
+  .fold-fix a {
+    font-size: 1.1rem !important;
+    padding: 0.75rem 1.8rem !important;
+  }
+
+  .fold-fix .social-icons {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    margin-top: 1.5rem !important;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) and (min-height: 1000px) {
+  .ipad-mini-fix {
+    padding-top: 2rem !important;
+  }
+
+  .ipad-mini-fix h1 {
+    margin-top: -3rem;
+  }
+
+
+  .ipad-mini-fix .hero-avatar {
+    margin-top: -2rem;
+  }
+}
+
+
+
+@media screen and (min-width: 1270px) and (max-width: 1300px) and (max-height: 820px) and (orientation: landscape) and (hover:none) {
+  .nesthub-fix {
+    padding-top: 4rem;
+    gap: 2.5rem;
+  }
+
+  .nesthub-fix h1 {
+    font-size: 4.5rem;
+  }
+
+  .nesthub-fix p {
+    font-size: 1.4rem;
+  }
+
+  .nesthub-fix a {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+  }
+
+  .nesthub-fix .hero-avatar {
+    width: 19rem;
+    height: 20rem;
+  }
+
+  .nesthub-fix .social-icons {
+    font-size: 2.3rem;
+  }
+}

@@ -1,26 +1,248 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+
+@font-face {
+  font-family: "magnolia";
+  src: url("/assets/Magnolia Script.otf") format("opentype");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+    font-family: "Huninn";
+    src: url("/assets/Huninn-Regular.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: 'GreatVibes';
+  src: url('/assets/GreatVibes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* .great-vibes */
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animation */
+@layer utilities {
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .nav-animated {
+    /* background-image: linear-gradient(-45deg, #ff5959, #ff4040, #ff0d6e, #ff8033, #d74177); */
+        /* background-image: linear-gradient(-45deg, #47afc2, #ffb640, #31abdb, #ff8033, #d74177); */
+        background-color: #f3e4cf;
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+  }
+
+  @keyframes flashText {
+    0% {
+      opacity: 1;
+      text-shadow: 0 0 0 transparent;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 2px 2px 20px #ffffff;
+    }
+  }
+
+  .link-hover-effect:hover {
+    animation: flashText 1.5s linear infinite;
+    color: white;
+  }
+
+  .white-line {
+    width: 2px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+}
+
+
+
+@layer utilities {
+  /* ====== orbitOvalUp ====== */
+  @keyframes orbitOvalUp {
+    0%   { transform: translate(200px, -50px); }
+    10%  { transform: translate(220px, 0px); }
+    20%  { transform: translate(250px, 30px); }
+    30%  { transform: translate(240px, 80px); }
+    40%  { transform: translate(230px, 100px); }
+    50%  { transform: translate(210px, 120px); }
+    60%  { transform: translate(190px, 130px); }
+    70%  { transform: translate(140px, 140px); }
+    80%  { transform: translate(80px, 140px); }
+    100% { transform: translate(-50px,110px); }
+  }
+
+  .orbit-oval-up {
+    animation: orbitOvalUp 5s linear infinite;
+  }
+
+  /* ====== orbitOvalUp1 ====== */
+  @keyframes orbitOvalUp1 {
+    0%   { transform: translate(270px, -50px); }
+    10%  { transform: translate(280px, 0px); }
+    20%  { transform: translate(270px, 30px); }
+    30%  { transform: translate(255px, 50px); }
+    40%  { transform: translate(230px, 70px); }
+    50%  { transform: translate(205px, 75px); }
+    60%  { transform: translate(150px, 85px); }
+    70%  { transform: translate(100px, 80px); }
+    80%  { transform: translate(30px, 70px); }
+    100% { transform: translate(-50px,40px); }
+  }
+
+  .orbit-oval-up-1 {
+    animation: orbitOvalUp1 5s linear infinite 2s;
+  }
+
+    @keyframes orbitOvalBottom {
+    0%   { transform: translate(-50px, 40px);}
+    10%  { transform: translate(-170px, -10px); }
+    20%  { transform: translate(-220px, -70px); }
+    30%  { transform: translate(-250px, -120px); }
+    40%  { transform: translate(-255px, -165px); }
+    50%  { transform: translate(-250px, -195px); }
+    60%  { transform: translate(-240px, -210px); }
+    70%  { transform: translate(-180px, -230px); }
+    80%  { transform: translate(-110px, -240px); }
+    90%  { transform: translate(-80px, -235px); }
+    100% { transform: translate(-10px, -230px); }
+  }
+
+  .orbit-oval-bottom {
+    animation: orbitOvalBottom 5.5s linear infinite;
+  }
+
+      @keyframes orbitOvalBottom1 {
+    0%   { transform: translate(-100px, 50px); }
+    10%  { transform: translate(-230px, -20px); }
+    20%  { transform: translate(-270px, -70px); }
+    30%  { transform: translate(-285px, -115px); }
+    40%  { transform: translate(-270px, -135px); }
+    50%  { transform: translate(-265px, -160px); }
+    50%  { transform: translate(-250px, -180px); }
+    60%  { transform: translate(-190px, -205px); }
+    70%  { transform: translate(-140px, -210px); }
+    80%  { transform: translate(-110px, -215px); }
+    100% { transform: translate(-10px, -200px); }
+  }
+
+  .orbit-oval-bottom1 {
+    animation: orbitOvalBottom1 5.5s linear infinite 2s;
+  }
+
+  /* ====== spinStar ====== */
+  @keyframes spinStar {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .spin-star {
+    animation: spinStar 1.5s linear infinite;
+  }
+
+  /* ====== blinkTwinkle ====== */
+  @keyframes blinkTwinkle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+      filter: drop-shadow(0 0 5px white);
+    }
+    50% {
+      transform: scale(1.7);
+      opacity: 0.3;
+      filter: drop-shadow(0 0 30px white);
+    }
+  }
+
+  .blink-twinkle {
+    animation: blinkTwinkle 2s ease-in-out infinite;
+  }
+
+  /* ====== fadeIn ====== */
+  @keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  /* ====== pulse (default Tailwind) ====== */
+  .pulse {
+    animation: pulse 2s infinite;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* global.css */
+/* @keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+} */
+
+
+@layer utilities {
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .group-hover\:rotate-y-180:hover {
+    transform: rotateY(180deg);
+  }
+}
+
+
+
+
+@import "../styles/responsive.css"
+
+
+
+
+
+
+
+
+

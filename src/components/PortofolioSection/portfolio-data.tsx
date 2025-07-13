@@ -1,0 +1,48 @@
+export const projects = [
+  {
+    title: "Personal Website Portfolio",
+    imageUrl: "https://imgur.com/a/personal-web-lGAE21X", 
+    technologies: ["ReactJS", "Tailwind CSS", "NextJS"],
+    description: "A single-page personal website with a responsive design and high performance.",
+    situation: "I wanted to build an online portfolio to showcase my skills and projects.",
+    task: "Develop a responsive and informative single-page website with smooth animations.",
+    action: "Used React and Tailwind CSS to create a modular structure with optimized performance.",
+    result: "The website was successfully developed and serves as a professional showcase of my frontend skills.",
+    projectUrl: "https://your-site.vercel.app",
+
+  },
+  {
+    title: "Delicia Bakery Website",
+    imageUrl: "https://i.imgur.com/JZ8QNmw.png",
+    technologies: ["HTML", "CSS", "JavaScript", "Swiper.js"],
+    description: "A modern, animated landing page for a fictional bakery brand built as a final university project.",
+    situation: "This website was developed as a final project for a university web development course.",
+    task: "Create a fully responsive landing page with engaging design and animations that showcase a bakery brand.",
+    action: "Implemented the page using plain HTML, CSS, and JavaScript. Integrated Swiper.js for a rotating product slider and focused on creativity and visual appeal.",
+    result: "The final website demonstrated strong frontend skills and was successfully deployed on Vercel as a portfolio project.",
+    projectUrl: "https://delicia-bakery.vercel.app",
+
+  },
+  {
+    title: "Travel Blog CMS",
+    imageUrl: "/images/blog.png",
+    technologies: ["Gatsby", "GraphQL", "Contentful"],
+    description: "Sistem blog statis cepat dengan pengelolaan konten dari CMS headless.",
+    situation: "Ingin membuat travel blog yang bisa diupdate tanpa deploy ulang.",
+    task: "Integrasi dengan Contentful untuk konten dinamis dan rendering cepat.",
+    action: "Membangun dengan Gatsby & GraphQL untuk performa dan kemudahan edit konten.",
+    result: "Blog bisa diupdate langsung dari CMS dan tampil cepat di berbagai perangkat.",
+    projectUrl: "https://travel-blog.com",
+  },
+  {
+    title: "Portfolio Gallery",
+    imageUrl: "/images/gallery.png",
+    technologies: ["React", "Framer Motion", "Tailwind"],
+    description: "Galeri interaktif dengan animasi halus untuk menampilkan karya desain.",
+    situation: "Perlu showcase visual untuk karya desain grafis dan animasi UI.",
+    task: "Buat tampilan galeri yang menarik dan mendukung banyak media.",
+    action: "Gunakan animasi Framer Motion dan layout responsive.",
+    result: "Pengunjung dapat menelusuri karya dengan mudah dan cepat.",
+    projectUrl: "https://gallery-site.com",
+  },
+];
